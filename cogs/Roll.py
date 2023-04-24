@@ -30,7 +30,7 @@ class Roll(commands.Cog):
         amount_R = "```" + str(rare_list[3]) + "```"
                 
         embed = discord.Embed(title = "十抽結果", color = 0xffff00)
-        embed.add_field(name = "> PIG & SSR 數量", value = amount_SPSSR, inline = True)
+        embed.add_field(name = "> PG & SSR 數量", value = amount_SPSSR, inline = True)
         embed.add_field(name = "> SR 數量", value = amount_SR, inline = True)
         embed.add_field(name = "> R 數量", value = amount_R, inline = True)
         embed.set_image(url = "attachment://image.png")
@@ -70,8 +70,8 @@ class Roll(commands.Cog):
     @commands.command()
     async def 概率(self, ctx):
         embed = discord.Embed(title = "抽卡概率", color = 0xffff00)
-        embed.add_field(name = "> 十抽概率", value = "```PIG  : 0.0714%``````SSR : 0.0778%```")
-        embed.add_field(name = "> 活動十抽概率", value = "```PU  : 2%``````SSR : 0.0714%``````SSR : 0.0341%```")
+        embed.add_field(name = "> 十抽概率", value = "```PG  : 0.0714%``````SSR : 0.0778%```")
+        embed.add_field(name = "> 活動十抽概率", value = "```PU  : 2%``````PG : 0.0714%``````SSR : 0.0341%```")
         embed.set_footer(text = "有任何問題或建議請打mm解決")
         await ctx.channel.send(embed = embed)
 
@@ -79,7 +79,8 @@ def Rolled_event():
         pic_list = []
         pic_num = 0
 
-        sp_num = 0
+        pu_num = 0
+        pg_num = 0
         ssr_num = 0
         sr_num = 0
         r_num = 0
@@ -88,9 +89,12 @@ def Rolled_event():
         while chance != 0:
             luckNum = random.randint(1,100000)
             pic_num = pic_num + luckNum
-            if luckNum <= 625:
+            if luckNum <= 2000:
                 pic_list.append(SSR_event())
-                sp_num = sp_num + 1
+                sp_num = pu_num + 1
+            elif luckNum <= 3125:
+                pic_list.append(SSR())
+                ssr_num = pg_num + 1
             elif luckNum <= 3125:
                 pic_list.append(SSR())
                 ssr_num = ssr_num + 1
