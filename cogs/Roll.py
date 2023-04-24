@@ -150,7 +150,7 @@ def SSR_event():
         return str("icon/SSR/" + ssr_pic)
 
 def SP():
-    sp_file = os.listdir("icons/SP/")
+    sp_file = os.listdir("icons/PILGRIM/")
     sp_pic = random.choice(sp_file)
     return str("icons/SP/" + sp_pic)
 
