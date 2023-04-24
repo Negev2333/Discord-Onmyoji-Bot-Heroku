@@ -34,7 +34,7 @@ class Roll(commands.Cog):
         embed.add_field(name = "> SR 數量", value = amount_SR, inline = True)
         embed.add_field(name = "> R 數量", value = amount_R, inline = True)
         embed.set_image(url = "attachment://image.png")
-        embed.set_footer(text = "有任何問題或建議請找 YellowToFish#5671")
+        embed.set_footer(text = "有任何問題或建議請mm解決")
         await ctx.channel.send(file = file, embed = embed)
         os.remove(save_name)
 
@@ -63,7 +63,7 @@ class Roll(commands.Cog):
         embed.add_field(name = "> SR 數量", value = amount_SR, inline = True)
         embed.add_field(name = "> R 數量", value = amount_R, inline = True)
         embed.set_image(url = "attachment://image.png")
-        embed.set_footer(text = "有任何問題或建議請找 YellowToFish#5671")
+        embed.set_footer(text = "有任何問題或建議請打mm解決")
         await ctx.channel.send(file = file, embed = embed)
         os.remove(save_name)
     
@@ -72,7 +72,7 @@ class Roll(commands.Cog):
         embed = discord.Embed(title = "抽卡概率", color = 0xffff00)
         embed.add_field(name = "> 十抽概率", value = "```SP  : 0.25%``````SSR : 1%```")
         embed.add_field(name = "> 活動十抽概率", value = "```SP  : 0.625%``````SSR : 2.5%```")
-        embed.set_footer(text = "有任何問題或建議請找 YellowToFish#5671")
+        embed.set_footer(text = "有任何問題或建議請打mm解決")
         await ctx.channel.send(embed = embed)
 
 def Rolled_event():
