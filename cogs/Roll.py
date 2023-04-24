@@ -30,7 +30,7 @@ class Roll(commands.Cog):
         amount_R = "```" + str(rare_list[3]) + "```"
                 
         embed = discord.Embed(title = "十抽結果", color = 0xffff00)
-        embed.add_field(name = "> SP & SSR 數量", value = amount_SPSSR, inline = True)
+        embed.add_field(name = "> PIG & SSR 數量", value = amount_SPSSR, inline = True)
         embed.add_field(name = "> SR 數量", value = amount_SR, inline = True)
         embed.add_field(name = "> R 數量", value = amount_R, inline = True)
         embed.set_image(url = "attachment://image.png")
@@ -59,7 +59,7 @@ class Roll(commands.Cog):
         amount_R = "```" + str(rare_list[3]) + "```"
                 
         embed = discord.Embed(title = "活動十抽結果", color = 0xffff00)
-        embed.add_field(name = "> SP & SSR 數量", value = amount_SPSSR, inline = True)
+        embed.add_field(name = "> PU & SSR 數量", value = amount_SPSSR, inline = True)
         embed.add_field(name = "> SR 數量", value = amount_SR, inline = True)
         embed.add_field(name = "> R 數量", value = amount_R, inline = True)
         embed.set_image(url = "attachment://image.png")
@@ -70,8 +70,8 @@ class Roll(commands.Cog):
     @commands.command()
     async def 概率(self, ctx):
         embed = discord.Embed(title = "抽卡概率", color = 0xffff00)
-        embed.add_field(name = "> 十抽概率", value = "```SP  : 0.25%``````SSR : 1%```")
-        embed.add_field(name = "> 活動十抽概率", value = "```SP  : 0.625%``````SSR : 2.5%```")
+        embed.add_field(name = "> 十抽概率", value = "```PIG  : 0.0714%``````SSR : 0.0778%```")
+        embed.add_field(name = "> 活動十抽概率", value = "```PU  : 2%``````SSR : 0.0714%``````SSR : 0.0341%```")
         embed.set_footer(text = "有任何問題或建議請打mm解決")
         await ctx.channel.send(embed = embed)
 
